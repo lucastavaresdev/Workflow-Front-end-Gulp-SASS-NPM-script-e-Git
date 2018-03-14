@@ -3,6 +3,8 @@ gitbach
 
 ctrl + l = limpa a tela ou clear
 -ls lista os arquivos
+ls- a arquivos ocultos
+ls- a -l lista os dados mais detalhadamente
 -pwd - tras o caminho
 - ~ a pasta nivel a cima
 cd -  leva a pasta
@@ -32,3 +34,26 @@ mkdir projeto && cd projeto
 para criar varias pasta pelo terminal
 
 mkdir(nomes da pastas) imagens css javascript
+
+----------------------------------------
+criar arquivo
+
+echo (mensagem) > index.html
+
+---------------------------------------
+ver nome do aquivo
+ 
+cat index.html
+
+----------------------------
+apgar arquivo
+
+rm (nome do arquivo)
+-------------------------
+alterar conteudo do aquivo
+//substitui conteudo
+echo minha segunda > index.html
+-------------------------
+
+//concatenar e add o palavra dentro do arquivo 
+echo minha segunda >> index.html
