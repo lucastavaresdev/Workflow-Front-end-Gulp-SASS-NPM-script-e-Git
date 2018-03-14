@@ -1,0 +1,34 @@
+
+gitbach
+
+ctrl + l = limpa a tela ou clear
+-ls lista os arquivos
+-pwd - tras o caminho
+- ~ a pasta nivel a cima
+cd -  leva a pasta
+cd.. nivel acima
+
+
+---------------------------
+criando pasta de projeto
+
+- mkdir (nome da pasta)
+- para ir na pasta é so ir digitar
+
+cd pro(apetar o tab para compretar o nome da pasta)
+
+
+---------------------------
+apagando a pasta de projeto
+
+rmdir (nome da pasta)projeto/
+
+---------------------
+criar o diretorio e ja entrar na pastta
+
+mkdir projeto && cd projeto
+
+------------------------
+para criar varias pasta pelo terminal
+
+mkdir(nomes da pastas) imagens css javascript
