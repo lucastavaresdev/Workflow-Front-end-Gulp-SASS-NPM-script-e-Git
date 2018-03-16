@@ -1,0 +1,19 @@
+configurando o git
+
+//primeiro passo eu tenho que configurar
+
+git config --global user.name "lucas tavares"
+git config --global user.email "lucastavaresdev@gmail.com.br"
+
+//segundo passo eu tenho que versionar
+$ git init
+//status do git
+
+git status
+
+//depois o gitt começa a monitorar o arquivo
+
+git add git.txt
+
+
+//primeiro commit pela linha de comando
