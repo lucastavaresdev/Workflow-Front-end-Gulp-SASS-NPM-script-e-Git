@@ -19,4 +19,6 @@ git add git.txt
 //primeiro commit pela linha de comando
 
     $ git commit -m "aula de git aula 4"
-    .
+    
+//comitar para varios arquivos
+$ git commit -am "teste de varios commits"
