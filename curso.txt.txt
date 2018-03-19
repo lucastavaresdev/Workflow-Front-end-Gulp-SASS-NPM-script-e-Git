@@ -63,3 +63,5 @@ echo minha segunda >> index.html ~s
     -----------------------------
     
     container(row>h1+h2) 
+    
+    ctrl + b ajuda a selecionar todos com a mesma palavra
