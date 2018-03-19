@@ -57,3 +57,10 @@ echo minha segunda > index.html
 
 //concatenar e add o palavra dentro do arquivo 
 echo minha segunda >> index.html ~s
+
+    -----------------------------
+        **emmet
+    -----------------------------
+    
+    container(row>h1+h2) 
+      
