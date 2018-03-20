@@ -65,3 +65,12 @@ echo minha segunda >> index.html ~s
     container(row>h1+h2) 
     
     ctrl + b ajuda a selecionar todos com a mesma palavra
+    
+------------------------------------------------------------------------------------
+        **Dependencias NPM
+-----------------------------
+        Primeiro Passo é instalar o node.js que ja vem com npm
+    
+    
+    
+    
