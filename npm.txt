@@ -1,0 +1,38 @@
+﻿configurando o package json
+npm init
+
+Pedira varias informações e depois gerara um arquivo packeger.json
+
+{
+  "name": "silviasilveira",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+-------------------
+para atualizar o package.json
+
+npm install font-awesome --save
+--------------
+para uma dependencia de desenvolvimento --save-dev
+
+--------------------
+Uma boa pratica é nao versionar o diretorio node_modules
+
+echo "node_modules/" > .gitignore
+
+o gitignore precisa versionar para o git ignorar
+
+-------------------
+
+
+
