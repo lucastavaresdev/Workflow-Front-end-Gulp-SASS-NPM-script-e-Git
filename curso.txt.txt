@@ -1,4 +1,4 @@
-
+﻿
 gitbach
 
 ctrl + l = limpa a tela ou clear
@@ -9,7 +9,8 @@ ls- a -l lista os dados mais detalhadamente
 - ~ a pasta nivel a cima
 cd -  leva a pasta
 cd.. nivel acima
-
+mv- nomedoarquivo nome da pasta
+rm -rf apaga pastas com subpastas
 
 ---------------------------
 criando pasta de projeto
@@ -71,6 +72,11 @@ echo minha segunda >> index.html ~s
 -----------------------------
         Primeiro Passo é instalar o node.js que ja vem com npm
     
+
+
+separando os arquivos de desenvolvimento com o de produção
+
+
     
     
     
