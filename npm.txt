@@ -34,5 +34,5 @@ o gitignore precisa versionar para o git ignorar
 
 -------------------
 
-
+para salvar no package é so colocar --save e para ser --save--dev
 
