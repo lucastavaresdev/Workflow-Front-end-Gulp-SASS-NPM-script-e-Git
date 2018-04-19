@@ -1,0 +1,15 @@
+{
+  "name": "curso",
+  "version": "0.0.1",
+  "description": "curso daniel tapias morales sobre conceitos basicos",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Tavares",
+  "license": "ISC"
+}
