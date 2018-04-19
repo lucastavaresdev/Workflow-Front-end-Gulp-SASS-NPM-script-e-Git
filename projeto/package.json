@@ -7,9 +7,16 @@
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mkdirp": "^0.5.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",
+    "start": "echo startando",
+    "prestart": "echo prestart",
+    "poststart": "echo post start",
+    "postinstall": "mkdirp src/components/bootstrap/ src/components/font-awesome/ &amp;&amp; cp -r node_modules/bootstrap/dist src/components/bootstrap/ &amp;&amp; cp -r node_modules/font-awesome/css src/components/font-awesome/ &amp;&amp; cp -r node_modules/font-awesome/fonts src/components/font-awesome/",
+    "gulp": "gulp"
   },
   "author": "Lucas Tavares",
   "license": "ISC"
