@@ -15,7 +15,7 @@
     "start": "echo startando",
     "prestart": "echo prestart",
     "poststart": "echo post start",
-    "postinstall": "mkdirp src/components/bootstrap/ src/components/font-awesome/ &amp;&amp; cp -r node_modules/bootstrap/dist src/components/bootstrap/ &amp;&amp; cp -r node_modules/font-awesome/css src/components/font-awesome/ &amp;&amp; cp -r node_modules/font-awesome/fonts src/components/font-awesome/",
+    "postinstall": "cp -r node_modules/bootstrap/dist src/components/bootstrap/ && cp -r node_modules/font-awesome/css src/components/font-awesome/ && cp -r node_modules/font-awesome/fonts src/components/font-awesome/",
     "gulp": "gulp"
   },
   "author": "Lucas Tavares",
