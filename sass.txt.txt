@@ -1,1 +1,6 @@
+
+-------------------------------------------------
+primeiro installa o node sass
 npm install node-sass --save-dev
+
+$ npm run nodesass -- --version
