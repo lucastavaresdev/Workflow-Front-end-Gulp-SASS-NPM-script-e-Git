@@ -1,6 +1,10 @@
 
 -------------------------------------------------
-primeiro installa o node sass
+1 - primeiro installa o node sass
 npm install node-sass --save-dev
 
+2- configura o script 
+"nodesass": "node-sass"
+
+testa versão 
 $ npm run nodesass -- --version
