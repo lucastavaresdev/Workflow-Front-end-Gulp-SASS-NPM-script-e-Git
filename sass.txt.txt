@@ -1,5 +1,7 @@
 
--------------------------------------------------
+O sass ignora o que começa com _(underline)-
+
+------------------------------------------------
 1 - primeiro installa o node sass
 npm install node-sass --save-dev
 
@@ -14,7 +16,12 @@ Criar arquivo sass
 $ touch src/sass/_partials/_header-animado.scss
 
 ------------------
-Compilando o nodesass
+Compilando o nodesass - 1 vez
 
 $ npm run nodesass src/sass/_partials/_header-animado.scss src/css/main.css
 
+
+---------------------------------
+gerar css automaticamente
+                                            pasta de saida - pasta de destino compilado
+ npm run nodesass -- --watch src/sass -o src/css
