@@ -28,3 +28,8 @@ puxa os arquivos
 
 envia os arquivos
 git push origin master
+
+////
+ver comits
+
+git log -n 4
