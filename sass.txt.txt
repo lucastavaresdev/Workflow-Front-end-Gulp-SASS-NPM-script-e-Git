@@ -25,3 +25,4 @@ $ npm run nodesass src/sass/_partials/_header-animado.scss src/css/main.css
 gerar css automaticamente
                                             pasta de saida - pasta de destino compilado
  npm run nodesass -- --watch src/sass -o src/css
+
