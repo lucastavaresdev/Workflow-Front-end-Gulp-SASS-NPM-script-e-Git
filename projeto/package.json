@@ -8,7 +8,8 @@
     "font-awesome": "^4.7.0"
   },
   "devDependencies": {
-    "mkdirp": "^0.5.1"
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.8.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",
@@ -16,7 +17,9 @@
     "prestart": "echo prestart",
     "poststart": "echo post start",
     "postinstall": "cp -r node_modules/bootstrap/dist src/components/bootstrap/ && cp -r node_modules/font-awesome/css src/components/font-awesome/ && cp -r node_modules/font-awesome/fonts src/components/font-awesome/",
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "nodesass": "node-sass"
+
   },
   "author": "Lucas Tavares",
   "license": "ISC"
