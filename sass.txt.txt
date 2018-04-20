@@ -8,3 +8,13 @@ npm install node-sass --save-dev
 
 testa versão 
 $ npm run nodesass -- --version
+
+----------------------
+Criar arquivo sass
+$ touch src/sass/_partials/_header-animado.scss
+
+------------------
+Compilando o nodesass
+
+$ npm run nodesass src/sass/_partials/_header-animado.scss src/css/main.css
+
