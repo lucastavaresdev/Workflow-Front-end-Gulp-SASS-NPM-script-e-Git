@@ -9,8 +9,8 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "mkdirp": "^0.5.1",
-    "node-sass": "^4.8.3"
+    "gulp-sass": "^4.0.1",
+    "mkdirp": "^0.5.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" &amp;&amp; exit 1",
@@ -18,8 +18,7 @@
     "prestart": "echo prestart",
     "poststart": "echo post start",
     "postinstall": "cp -r node_modules/bootstrap/dist src/components/bootstrap/ && cp -r node_modules/font-awesome/css src/components/font-awesome/ && cp -r node_modules/font-awesome/fonts src/components/font-awesome/",
-    "gulp": "gulp",
-    "nodesass": "node-sass"
+    "gulp": "gulp"
   },
   "author": "Lucas Tavares",
   "license": "ISC"

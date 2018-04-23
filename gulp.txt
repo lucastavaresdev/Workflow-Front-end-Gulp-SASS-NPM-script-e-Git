@@ -17,4 +17,11 @@ depois criar pelo terminal
 touch gulpfile.js
 
 no gulpfile requerer o modulo
-var gulp = require('gulp');
+var gulp = require('gulp'); 
+
+--nao precisa do node sass pq o gulp ja tem um plugin para isto
+
+npm uninstall node-sass --save-dev
+
+--instalando o gulp-sass
+$ npm install gulp-sass --save-dev
