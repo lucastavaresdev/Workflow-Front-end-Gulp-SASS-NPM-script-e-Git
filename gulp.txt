@@ -1,0 +1,20 @@
+--apenas localmente
+
+npm i gulp --save-dev
+
+como esta apenas localmente é preciso add no peckager 
+
+"gulp": "gulp",
+
+apos isso 
+
+npm run gulp
+
+ira dar 1 erro pois nao tem o gulpfile
+
+
+depois criar pelo terminal
+touch gulpfile.js
+
+no gulpfile requerer o modulo
+var gulp = require('gulp');
