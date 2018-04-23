@@ -26,3 +26,28 @@ gerar css automaticamente
                                             pasta de saida - pasta de destino compilado
  npm run nodesass -- --watch src/sass -o src/css
 
+$ npm run nodesass -- --watch src/sass -o src/css/
+
+-----------------------------
+tem que criar a função antes de aplicar
+
+
+função no sass
+
+@function escurece($cor){
+
+    return darken($cor, 30%);
+}
+
+utilizar
+
+.botao{
+    $bg: red;
+    backgroud: $bG
+    color: escurece();
+
+    &:hover{
+        backgroud: escurece($bg)
+    }
+
+}
