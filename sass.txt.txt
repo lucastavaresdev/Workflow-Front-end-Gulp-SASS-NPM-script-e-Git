@@ -56,3 +56,7 @@ utilizar
 }
 
 ------------------------------------------
+
+@mixin borda-redonda($raio: 15px){
+    borda-radius: $raio;
+}
