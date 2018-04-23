@@ -33,6 +33,9 @@ tem que criar a função antes de aplicar
 
 
 função no sass
+@function escurece($cor, $x:40%){
+    return darken($cor, $x);
+}
 
 @function escurece($cor){
 
@@ -51,3 +54,5 @@ utilizar
     }
 
 }
+
+------------------------------------------
