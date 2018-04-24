@@ -1,3 +1,5 @@
 .header-animado{
-    height: 250px;
+   $h: 300;
+   background-color: $main-color;
+   height: $h;
 }
