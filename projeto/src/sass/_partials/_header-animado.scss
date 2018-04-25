@@ -1,12 +1,13 @@
 .header-animado{
-   $h: 300;
    background-color: $main-color;
-   height: $h;
 
-   &__title{
-       
+   .header-animado__title{
+       color: #00151a;
+       font-size: 38px; 
+       font-weight: bold;
    }
-   &__subtitle{
-
+   .header-animado__subtitle{
+    color: white;
    }
 }
+
