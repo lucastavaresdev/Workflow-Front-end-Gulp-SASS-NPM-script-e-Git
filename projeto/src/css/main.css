@@ -65,6 +65,14 @@ h1, h2, h3, h4, h5, h6, .title {
     line-height: 1.5; }
   .header-animado__ilustra {
     background-image: url(../imagens/cenario_all_960.png);
+    margin-top: 8%;
     height: 150px;
     background-size: auto 100%;
     background-position: center top; }
+    @media screen and (min-width: 480px) {
+      .header-animado__ilustra {
+        background-image: url(../imagens/cenario_all_1530.png); } }
+    @media screen and (min-width: 960px) {
+      .header-animado__ilustra {
+        background-image: url(../imagens/cenario_bg.png);
+        height: 300px; } }
