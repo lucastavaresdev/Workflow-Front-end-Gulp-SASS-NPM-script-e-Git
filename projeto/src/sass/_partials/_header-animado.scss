@@ -1,6 +1,6 @@
 .header-animado{
    background-color: $main-color;
-
+    padding-top: 96px; 
    .header-animado__title{
        color: #00151a;
        font-size: 38px; 
@@ -8,6 +8,9 @@
    }
    .header-animado__subtitle{
     color: white;
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 1.5; 
    }
 }
 
