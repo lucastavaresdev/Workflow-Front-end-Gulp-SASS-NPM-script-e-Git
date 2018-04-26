@@ -1,46 +1,38 @@
-
-.header-animado{
-    $h:300px;
+.header-animado {
+    $h: 300px;
     $largura_cenario: 2400px;
-
     background-color: $main-color;
-    padding-top: 96px; 
+    padding-top: 96px;
     margin-bottom: 0;
     padding-bottom: 0;
-
-
-   .header-animado__title{
-       color: #00151a;
-       font-size: 38px; 
-       font-weight: bold;
-   }
-   .header-animado__subtitle{
-    color: white;
-    font-size: 34px;
-    font-weight: 300;
-    line-height: 1.5; 
-   }
-
-   &__ilustra{
-       background-image: url(../imagens/cenario_all_960.png);
-       margin-top: 8%; 
-       height: $h/2;
-       background-size: auto 100%;
-       background-position: center top;
-
-       &>div{
+    .header-animado__title {
+        color: #00151a;
+        font-size: 38px;
+        font-weight: bold;
+    }
+    .header-animado__subtitle {
+        color: white;
+        font-size: 34px;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+    &__ilustra {
+        background-image: url(../imagens/cenario_all_960.png);
+        margin-top: 8%;
+        height: $h/2;
+        background-size: auto 100%;
+        background-position: center top;
+        &>div {
             display: none;
-       }  
-
-       @media screen and (min-width: 480px){
-           background-image: url(../imagens/cenario_all_1530.png);
         }
-        @media screen  and (min-width:960px){
-            background-image: url(../imagens/cenario_bg.png); 
+        @media screen and (min-width: 480px) {
+            background-image: url(../imagens/cenario_all_1530.png);
+        }
+        @media screen and (min-width:960px) {
+            background-image: url(../imagens/cenario_bg.png);
             height: $h;
             position: relative;
-
-            &>div{
+            &>div {
                 display: block;
                 height: 100%;
                 position: absolute;
@@ -48,37 +40,36 @@
                 left: 0;
                 width: $largura_cenario * 2;
             }
-
-            @keyframes anima-cenario {
-                from{
-                        transform: translateX(-50%) translateZ(0);
+            @mixin anima($imagem, $tipo_anima: '90s linear infinite;') {
+                background-image: url(../imagens/#{$imagem});
+                animation: anima-cenario #$ {
+                    $tipo_anima
                 }
-                to{
+                ;
+            }
+            @keyframes anima-cenario {
+                from {
+                    transform: translateX(-50%) translateZ(0);
+                }
+                to {
                     transform: translateX(0) tanslateZ(0);
                 }
             }
-
-            .nuvens{ 
-                background-image: url(../imagens/cenario_nuvens.png);
-                animation: anima-cenario 90s linear infinite  ;
+            .nuvens {
+                @include anima('cenario_nuvens.png');
             }
-            .casas{ 
-                background-image: url(../imagens/cenario_casas.png);
-                animation: anima-cenario 30s linear infinite reverse;
+            .casas {
+                @include anima('cenario_casas.png', '30s linear infinite reverse');
             }
-            .rua{ 
-                background-image: url(../imagens/cenario_rua.png);
-                animation: anima-cenario 30s linear infinite reverse;
+            .rua {
+                @include anima('cenario_rua.png', '30s linear infinite reverse');
             }
-            .carrosCima{ 
-                background-image: url(../imagens/cenario_carrosCima.png);
-                animation: anima-cenario 15s linear infinite reverse;
+            .carrosCima {
+                @include anima('cenario_carrosCima.png', '15s linear infinite reverse');
             }
-            .carrosBaixo{ 
-                background-image: url(../imagens/cenario_carrosBaixo.png);
-                animation: anima-cenario 15s linear infinite;
+            .carrosBaixo {
+                @include anima('cenario_carrosBaixo.png', '15s linear infinite');
             }
         }
-   }
-}   
-
+    }
+}
