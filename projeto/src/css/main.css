@@ -1,78 +1,158 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+/* line 1, C:/wamp64/www/cursos/workflow/projeto/src/sass/_base.scss */
 h1, h2, h3, h4, h5, h6, .title {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
+/* line 1, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-nav.scss */
 .header-nav {
-  background: #84b8af; }
-  .js .header-nav {
-    height: 50px; }
-    .js .header-nav .container {
-      height: 100%; }
-  .header-nav__logo {
-    display: inline-block;
-    max-width: 350px;
-    height: 50px;
-    position: relative;
-    top: 10px;
-    z-index: 10; }
-    .header-nav__logo img {
-      max-width: 100%;
-      height: 100%; }
-  .header-nav__hamburgger {
-    display: none; }
-    .js .header-nav__hamburgger {
-      display: inline-block;
-      float: right;
-      height: 100%;
-      border: none;
-      background: transparent;
-      color: white;
-      font-size: 2em;
-      padding: 0 .5em; }
-      .js .header-nav__hamburgger:hover, .js .header-nav__hamburgger:focus {
-        background: #74aea5; }
-  .header-nav__menu {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-    .header-nav__menu a {
-      color: white;
-      display: block;
-      font-size: 1.5em;
-      border-top: 1px solid #549187;
-      padding: 1em; }
-      .header-nav__menu a:hover {
-        background: #58988d; }
-    .js .header-nav__menu {
-      display: none; }
-    .menu-openned .header-nav__menu {
-      display: block; }
+  background: #84b8af;
+}
 
+/* line 4, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-nav.scss */
+.js .header-nav {
+  height: 50px;
+}
+
+/* line 6, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-nav.scss */
+.js .header-nav .container {
+  height: 100%;
+}
+
+/* line 12, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-nav.scss */
+.header-nav__logo {
+  display: inline-block;
+  max-width: 350px;
+  height: 50px;
+  position: relative;
+  top: 10px;
+  z-index: 10;
+}
+
+/* line 20, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-nav.scss */
+.header-nav__logo img {
+  max-width: 100%;
+  height: 100%;
+}
+
+/* line 26, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-nav.scss */
+.header-nav__hamburgger {
+  display: none;
+}
+
+/* line 28, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-nav.scss */
+.js .header-nav__hamburgger {
+  display: inline-block;
+  float: right;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 2em;
+  padding: 0 .5em;
+}
+
+/* line 38, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-nav.scss */
+.js .header-nav__hamburgger:hover, .js .header-nav__hamburgger:focus {
+  background: #74aea5;
+}
+
+/* line 44, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-nav.scss */
+.header-nav__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 49, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-nav.scss */
+.header-nav__menu a {
+  color: white;
+  display: block;
+  font-size: 1.5em;
+  border-top: 1px solid #549187;
+  padding: 1em;
+}
+
+/* line 57, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-nav.scss */
+.header-nav__menu a:hover {
+  background: #58988d;
+}
+
+/* line 61, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-nav.scss */
+.js .header-nav__menu {
+  display: none;
+}
+
+/* line 65, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-nav.scss */
+.menu-openned .header-nav__menu {
+  display: block;
+}
+
+/* line 2, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-animado.scss */
 .header-animado {
   background-color: #64a59a;
   padding-top: 96px;
   margin-bottom: 0;
-  padding-bottom: 0; }
-  .header-animado .header-animado__title {
-    color: #00151a;
-    font-size: 38px;
-    font-weight: bold; }
-  .header-animado .header-animado__subtitle {
-    color: white;
-    font-size: 34px;
-    font-weight: 300;
-    line-height: 1.5; }
+  padding-bottom: 0;
+}
+
+/* line 10, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-animado.scss */
+.header-animado .header-animado__title {
+  color: #00151a;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+/* line 15, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-animado.scss */
+.header-animado .header-animado__subtitle {
+  color: white;
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* line 22, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-animado.scss */
+.header-animado__ilustra {
+  background-image: url(../imagens/cenario_all_960.png);
+  margin-top: 8%;
+  height: 150px;
+  background-size: auto 100%;
+  background-position: center top;
+}
+
+/* line 29, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-animado.scss */
+.header-animado__ilustra > div {
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  /* line 22, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-animado.scss */
   .header-animado__ilustra {
-    background-image: url(../imagens/cenario_all_960.png);
-    margin-top: 8%;
-    height: 150px;
-    background-size: auto 100%;
-    background-position: center top; }
-    @media screen and (min-width: 480px) {
-      .header-animado__ilustra {
-        background-image: url(../imagens/cenario_all_1530.png); } }
-    @media screen and (min-width: 960px) {
-      .header-animado__ilustra {
-        background-image: url(../imagens/cenario_bg.png);
-        height: 300px; } }
+    background-image: url(../imagens/cenario_all_1530.png);
+  }
+}
+
+@media screen and (min-width: 960px) {
+  /* line 22, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-animado.scss */
+  .header-animado__ilustra {
+    background-image: url(../imagens/cenario_bg.png);
+    height: 300px;
+    position: relative;
+  }
+  /* line 41, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-animado.scss */
+  .header-animado__ilustra > div {
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  /* line 50, C:/wamp64/www/cursos/workflow/projeto/src/sass/_partials/_header-animado.scss */
+  .header-animado__ilustra .nuvens {
+    background-image: url(../imagens/cenario_nuvens.png);
+  }
+}
+
+/*# sourceMappingURL=../css/main.map */
