@@ -1,6 +1,8 @@
 
 .header-animado{
     $h:300px;
+    $largura_cenario: 2400px;
+
     background-color: $main-color;
     padding-top: 96px; 
     margin-bottom: 0;
@@ -44,13 +46,39 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                right: 0;
+                width: $largura_cenario * 2;
+            }
+
+            @keyframes anima-cenario {
+                from{
+                        transform: translateX(-50%) translateZ(0);
+                }
+                to{
+                    transform: translateX(0) tanslateZ(0);
+                }
             }
 
             .nuvens{ 
                 background-image: url(../imagens/cenario_nuvens.png);
+                animation: anima-cenario 90s linear infinite  ;
+            }
+            .casas{ 
+                background-image: url(../imagens/cenario_casas.png);
+                animation: anima-cenario 30s linear infinite reverse;
+            }
+            .rua{ 
+                background-image: url(../imagens/cenario_rua.png);
+                animation: anima-cenario 30s linear infinite reverse;
+            }
+            .carrosCima{ 
+                background-image: url(../imagens/cenario_carrosCima.png);
+                animation: anima-cenario 15s linear infinite reverse;
+            }
+            .carrosBaixo{ 
+                background-image: url(../imagens/cenario_carrosBaixo.png);
+                animation: anima-cenario 15s linear infinite;
             }
         }
    }
-}
+}   
 
