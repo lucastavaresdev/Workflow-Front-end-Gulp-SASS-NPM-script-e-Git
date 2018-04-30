@@ -112,6 +112,28 @@ h1, h2, h3, h4, h5, h6, .title {
   border-radius: 0;
   border: 1px solid transparent;
   position: relative; }
+  .card-portfolio:before {
+    content: ' ';
+    z-index: -1;
+    position: absolute;
+    background: tomato;
+    width: 50%;
+    bottom: 11px;
+    height: 20px;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(-2.5deg);
+    left: 5px; }
+  .card-portfolio:after {
+    content: ' ';
+    z-index: -1;
+    position: absolute;
+    background: tomato;
+    width: 50%;
+    bottom: 11px;
+    height: 20px;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(2.5deg);
+    right: 5px; }
   .card-portfolio__imagem {
     height: 320px;
     overflow: hidden; }
@@ -133,4 +155,4 @@ h1, h2, h3, h4, h5, h6, .title {
     border: none;
     border-radius: 0;
     width: 100px;
-    transition: backgroud .3s linear; }
+    transition: all .3s linear; }

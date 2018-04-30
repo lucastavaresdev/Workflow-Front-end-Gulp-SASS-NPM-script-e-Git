@@ -1,5 +1,31 @@
 .card-portfolio {
-    padding: 0;
+    @mixin sombra($direcao, $angulo, $distancia) {
+        content: ' ';
+        z-index: -1;
+        position: absolute;
+        background: tomato;
+        width: 50%;
+        bottom: 11px;
+        height: 20px;
+        box-shadow: 0 15px 10px #777;
+        
+        @if $direcao == 'esq' {
+            transform: rotate($angulo * -1);
+            left: $distancia;
+        }@else {
+            transform: rotate($angulo);
+            right: $distancia;
+        }
+    }
+
+    &:before {
+        @include sombra('esq', 2.5deg, 5px);
+    }
+    &:after {
+        @include sombra('dir', 2.5deg, 5px);
+    } 
+
+    padding: 0; 
     border-radius: 0;
     border: 1px solid transparent;
     position: relative;
@@ -17,7 +43,7 @@
             opacity: 1;
         }
         .card-portfolio__btn {
-            background: lighten($main-color,30);
+            background: lighten($main-color, 30);
             color: #fff;
             &:hover {
                 background: lighten($main-color, 30);
