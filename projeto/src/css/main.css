@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6, .title {
 
 .header-animado {
   background-color: #64a59a;
-  padding-top: 96px;
+  padding-top: 90px;
   margin-bottom: 0;
   padding-bottom: 0; }
   .header-animado .header-animado__title {
@@ -64,19 +64,19 @@ h1, h2, h3, h4, h5, h6, .title {
     font-weight: 300;
     line-height: 1.5; }
   .header-animado__ilustra {
-    background-image: url(../imagens/cenario_all_960.png);
-    margin-top: 8%;
+    background-image: url(../img/cenario_all_960.png);
     height: 150px;
     background-size: auto 100%;
-    background-position: center top; }
+    background-position: 50% top;
+    overflow: hidden; }
     .header-animado__ilustra > div {
       display: none; }
     @media screen and (min-width: 480px) {
       .header-animado__ilustra {
-        background-image: url(../imagens/cenario_all_1530.png); } }
+        background-image: url(../img/cenario_all_1530.png); } }
     @media screen and (min-width: 960px) {
       .header-animado__ilustra {
-        background-image: url(../imagens/cenario_bg.png);
+        background-image: url(../img/cenario_bg.png);
         height: 300px;
         position: relative; }
         .header-animado__ilustra > div {
@@ -86,27 +86,26 @@ h1, h2, h3, h4, h5, h6, .title {
           top: 0;
           left: 0;
           width: 4800px; }
-      @keyframes anima-cenario {
+      @keyframes anima_cenario {
         from {
           transform: translateX(-50%) translateZ(0); }
         to {
-          transform: translateX(0) tanslateZ(0); } }
+          transform: translateX(0) translateZ(0); } }
         .header-animado__ilustra .nuvens {
-          background-image: url(../imagens/cenario_nuvens.png);
-          animation: anima-cenario 90s linear infinite; }
+          background-image: url(../img/cenario_nuvens.png);
+          animation: anima_cenario 90s linear infinite reverse; }
         .header-animado__ilustra .casas {
-          animation: anima-cenario 30s linear infinite reverse;
-          background-image: url(../imagens/cenario_casas.png);
-          animation: anima-cenario 90s linear infinite; }
+          background-image: url(../img/cenario_casas.png);
+          animation: anima_cenario 30s linear infinite; }
         .header-animado__ilustra .rua {
-          background-image: url(../imagens/cenario_rua.png);
-          animation: anima-cenario 90s linear infinite;
-          animation: anima-cenario 30s linear infinite reverse; }
+          background-image: url(../img/cenario_rua.png);
+          animation: anima_cenario 30s linear infinite; }
         .header-animado__ilustra .carrosCima {
-          background-image: url(../imagens/cenario_carrosCima.png);
-          animation: anima-cenario 90s linear infinite;
-          animation: anima-cenario 15s linear infinite reverse; }
+          background-image: url(../img/cenario_carrosCima.png);
+          animation: anima_cenario 10s linear infinite reverse; }
         .header-animado__ilustra .carrosBaixo {
-          background-image: url(../imagens/cenario_carrosBaixo.png);
-          animation: anima-cenario 90s linear infinite;
-          animation: anima-cenario 15s linear infinite; } }
+          background-image: url(../img/cenario_carrosBaixo.png);
+          animation: anima_cenario 12s linear infinite; } }
+
+.card-portfolio {
+  background: red; }
