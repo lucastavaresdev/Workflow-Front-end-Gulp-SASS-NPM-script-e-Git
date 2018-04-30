@@ -6,6 +6,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
+    "gulp-wait": "0.0.2",
     "node-sass": "^4.8.1"
   },
   "devDependencies": {

@@ -8,14 +8,14 @@ gulp.src('./src/sass/**/*.scss')
     .pipe(gulp.dest('./src/css/'));
 })
 
-gulp.task('listen', function(){
-gulp.watch('./src/sass/**/*.scss',['sass'])
-})
 
-gulp.task('server', function(){
+gulp.task('serve', function(){
     browserSync.init({
         server:{
             baseDir: 'src'
         }
     })
+    gulp.watch('./src/css/*.css').on('change', browserSync.reload)
+
+    gulp.watch('./src/sass/**/*.scss', ['sass'])
 })
