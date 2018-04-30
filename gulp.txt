@@ -57,3 +57,5 @@ live rederização
 -------------------------------
 se tiver dando erro de compilar o sass
 ******npm i gulp-wait*****
+
+ctrl c para o servidor
