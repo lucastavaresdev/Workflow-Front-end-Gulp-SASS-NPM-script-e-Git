@@ -25,3 +25,34 @@ npm uninstall node-sass --save-dev
 
 --instalando o gulp-sass
 $ npm install gulp-sass --save-dev
+
+
+-------------------------------
+live rederização
+
+        npm install browser-sync -D
+        ---
+        var gulp  = require('gulp')
+        ,sass = require('gulp-sass'),
+        browserSync = require('browser-sync');
+
+        gulp.task('sass', function(){
+        gulp.src('./src/sass/**/*.scss')
+            .pipe(sass())
+            .pipe(gulp.dest('./src/css/'));
+        })
+
+        gulp.task('listen', function(){
+        gulp.watch('./src/sass/**/*.scss',['sass'])
+        })
+
+        gulp.task('server', function(){
+            browserSync.init({
+                server:{
+                    baseDir: 'src'
+                }
+            })
+        })
+
+-------------------------------
+
