@@ -1,3 +1,36 @@
-.card-portfolio{
-    background: red;
+.card-portfolio {
+    padding: 0;
+    border-radius: 0;
+    border: 1px solid transparent;
+    position: relative;
+    &__imagem {
+        height: 320px;
+        overflow: hidden;
+        img {
+            max-width: 100%;
+            opacity: .7;
+            transition: opacity .3s linear;
+        }
+    }
+    &:hover {
+        img {
+            opacity: 1;
+        }
+        .card-portfolio__btn {
+            background: lighten($main-color,30);
+            color: #fff;
+            &:hover {
+                background: lighten($main-color, 30);
+            }
+        }
+    }
+    &__btn {
+        background: transparent;
+        color: $main-color;
+        display: block;
+        border: none;
+        border-radius: 0;
+        width: 100px;
+        transition: all .3s linear;
+    }
 }

@@ -108,4 +108,29 @@ h1, h2, h3, h4, h5, h6, .title {
           animation: anima_cenario 12s linear infinite; } }
 
 .card-portfolio {
-  background: red; }
+  padding: 0;
+  border-radius: 0;
+  border: 1px solid transparent;
+  position: relative; }
+  .card-portfolio__imagem {
+    height: 320px;
+    overflow: hidden; }
+    .card-portfolio__imagem img {
+      max-width: 100%;
+      opacity: .7;
+      transition: opacity .3s linear; }
+  .card-portfolio:hover img {
+    opacity: 1; }
+  .card-portfolio:hover .card-portfolio__btn {
+    background: #c5ddd9;
+    color: #fff; }
+    .card-portfolio:hover .card-portfolio__btn:hover {
+      background: #c5ddd9; }
+  .card-portfolio__btn {
+    background: transparent;
+    color: #64a59a;
+    display: block;
+    border: none;
+    border-radius: 0;
+    width: 100px;
+    transition: backgroud .3s linear; }
