@@ -1,69 +1,84 @@
-.header-nav{
-        background: lighten($main-color,10%);
-        $h:50px;
-        .js &{
-            height:$h;
-            .container{
-                height: 100%;
-            }
-
+.header-nav {
+    background: lighten($main-color, 10%);
+    $h: 50px;
+    $braakpoint: 680px;
+    .js & {
+        height: $h;
+        .container {
+            height: 100%;
         }
-        
-        &__logo{
+    }
+    &__logo {
+        display: inline-block;
+        max-width: 350px;
+        height: $h;
+        position: relative;
+        top: 10px;
+        z-index: 10;
+        img {
+            max-width: 100%;
+            height: 100%;
+        }
+    }
+    &__hamburgger {
+        display: none;
+        .js & {
             display: inline-block;
-            max-width: 350px;
-            height: $h;
-            position: relative;
-            top: 10px;
-            z-index: 10;
+            float: right;
+            height: 100%;
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 2em;
+            padding: 0 .5em;
+            &:hover, &:focus {
+                background: lighten($main-color, 5%);
+            }
 
-            img{
-                max-width: 100%;
-                height: 100%; 
+            @media screen and (min-width: #{$braakpoint}){
+                display: none;
             }
         }
-
-        &__hamburgger{
-            display: none;
-            .js &{
-                display: inline-block;
-                float: right;
-                height: 100%;
-                border:none;
-                background: transparent;
-                color: white;
-                font-size: 2em;
-                padding:  0 .5em;
-
-                &:hover, &:focus{
-                    background: lighten($main-color, 5%);
-                }
-            }
-        }
-
-    &__menu{
+    }
+    &__menu {
         list-style: none;
         margin: 0;
         padding: 0;
-        
-        a{
-            color:  white;
+        a {
+            color: white;
             display: block;
             font-size: 1.5em;
             border-top: 1px solid darken($main-color, 7%);
             padding: 1em;
-            
-
-            &:hover{
+            &:hover {
                 background: darken($main-color, 5%);
             }
         }
-        .js &{
-            display: none;
+        .js & {
+            @media screen and (max-width: #{$braakpoint}) {
+                background: darken($main-color,20%);
+                position: fixed;
+                z-index: 10;
+                top: $h;
+                left: -100%;
+                width: 100%;
+                bottom: 0;
+                transition: left .3s ease-out;
+            }
         }
-
-        .menu-openned &{
-            display: block; 
+        .menu-opened & {
+            display: block;
+            @media screen and(max-width: $braakpoint) {
+                left: 0;
+            }
+        }
+        @media screen and (min-width: #{$braakpoint}) {
+            display: inline-block;
+            float: right;
+            height: $h;
+            li {
+                display: inline-block;
+            }
         }
     }
 }

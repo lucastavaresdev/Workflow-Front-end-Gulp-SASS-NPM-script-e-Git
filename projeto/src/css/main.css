@@ -32,6 +32,9 @@ h1, h2, h3, h4, h5, h6, .title {
       padding: 0 .5em; }
       .js .header-nav__hamburgger:hover, .js .header-nav__hamburgger:focus {
         background: #74aea5; }
+      @media screen and (min-width: 680px) {
+        .js .header-nav__hamburgger {
+          display: none; } }
   .header-nav__menu {
     list-style: none;
     margin: 0;
@@ -44,10 +47,28 @@ h1, h2, h3, h4, h5, h6, .title {
       padding: 1em; }
       .header-nav__menu a:hover {
         background: #58988d; }
-    .js .header-nav__menu {
-      display: none; }
-    .menu-openned .header-nav__menu {
+    @media screen and (max-width: 680px) {
+      .js .header-nav__menu {
+        background: #3c6760;
+        position: fixed;
+        z-index: 10;
+        top: 50px;
+        left: -100%;
+        width: 100%;
+        bottom: 0;
+        transition: left .3s ease-out; } }
+    .menu-opened .header-nav__menu {
       display: block; }
+      @media screen and (max-width: 680px) {
+        .menu-opened .header-nav__menu {
+          left: 0; } }
+    @media screen and (min-width: 680px) {
+      .header-nav__menu {
+        display: inline-block;
+        float: right;
+        height: 50px; }
+        .header-nav__menu li {
+          display: inline-block; } }
 
 .header-animado {
   background-color: #64a59a;
