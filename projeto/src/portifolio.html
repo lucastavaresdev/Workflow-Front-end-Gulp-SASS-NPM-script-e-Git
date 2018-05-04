@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Site pessoal da silvia silveira</title>
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css"</head>
+ 
+    <body>
+@@include('./inc/nav.html')
+
+        <div class="jumbotron header-animado">
+            <div class="container">
+                <p class="header-animado__title">O que ando fazendo</p>
+                <h1 class="header-animado__subtitle">Veja alguns dos meus trabalhos</h1>
+            </div>
+           
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Ultimos trabalhos</h2>
+                </div>
+            </div>
+
+
+            @@loop('./inc/card-portifolio.html', [
+            {
+                "titulo": "titulo alterado card-1",
+                "imagem": "img/portfolio/01.jpg",
+                "texto": "isto é um testo",
+                "link": "#",
+                "alt": "texto alternativo"
+            },
+            {
+                "titulo": "titulo 2",
+                "imagem": "img/portfolio/02.jpg",
+                "texto": "isto é um testo",
+                "link": "#",
+                "alt": "texto alternativo"
+            },
+            {
+                "titulo": "card 3 ",
+                "imagem": "img/portfolio/03.jpg",
+                "texto": "isto é um testo",
+                "link": "#",
+                "alt": "texto alternativo"
+            },
+            {
+                "titulo": "card 4",
+                "imagem": "img/portfolio/04.jpg",
+                "texto": "isto é um testo",
+                "link": "#",
+                "alt": "texto alternativo"
+            },
+            {
+                "titulo": "card 5",
+                "imagem": "img/portfolio/05.jpg",
+                "texto": "isto é um testo",
+                "link": "#",
+                "alt": "texto alternativo"
+            },
+            {
+                "titulo": "card 6",
+                "imagem": "img/portfolio/06.jpg",
+                "texto": "isto é um testo",
+                "link": "#",
+                "alt": "texto alternativo"
+            }
+            ])
+                    
+
+
+        <hr>
+        </div>
+@@include('./inc/footer.html')
+
+        <script src="javascript/main.js"></script>
+        <script src="javascript/menu.js"></script>
+
+    </body>
+</html>
