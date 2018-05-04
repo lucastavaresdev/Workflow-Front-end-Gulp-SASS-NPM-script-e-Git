@@ -93,6 +93,15 @@
             height: $h;
             li {
                 display: inline-block;
+                transition:  all .3s ease-in;
+                padding: -15px;
+                a{
+                    border-top: none;
+                    &:hover{
+                        transform: translate(.5em);
+                        box-shadow: 0 5px 15px -10px black;
+                    }
+                }
             }
         }
     }
