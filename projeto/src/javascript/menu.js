@@ -3,6 +3,7 @@
 
     var btn = document.querySelector('.header-nav__hamburgger');
     var html = document.querySelector('html');
+   var classMenu = 'menu-opened';
     var menuOpened = false;
 
     btn.addEventListener('click', toggleMenu);
@@ -15,14 +16,15 @@
         }
     }
 
+    
     function closeMenu(){
         menuOpened = false;
-        html.classList.remove('menu-opened')
+        html.classList.remove(classMenu);
     }
     function openMenu(){
         menuOpened = true;
 
-        html.classList.add('menu-opened')
+        html.classList.add(classMenu);
     }
 
 })();
