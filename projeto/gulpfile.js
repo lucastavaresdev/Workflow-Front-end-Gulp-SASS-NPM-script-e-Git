@@ -9,6 +9,13 @@ gulp.src('./src/sass/**/*.scss')
     .pipe(gulp.dest('./src/css/'));
 })
 
+gulp.task('copy', function(){
+    gulp.src(['src/components/**/*' , 'src/css/**/*' , 'src/javascript/**/*', 'src/img/**/*'], {"base": "src"})//o base mantem a estrutura
+    .pipe(gulp.dest('dist'))
+})
+
+
+
 gulp.task('html',function(){
     gulp.src('./src/index.html')
         .pipe(include())
