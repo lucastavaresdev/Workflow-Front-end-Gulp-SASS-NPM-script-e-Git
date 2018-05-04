@@ -6,6 +6,12 @@
    var classMenu = 'menu-opened';
     var menuOpened = false;
 
+    html.addEventListener('click', function(e){
+        if(e.target === html && menuOpened){
+            closeMenu();
+        }
+    });
+
     btn.addEventListener('click', toggleMenu);
 
     function toggleMenu(e){
@@ -20,6 +26,7 @@
     function closeMenu(){
         menuOpened = false;
         html.classList.remove(classMenu);
+        btn.blur();
     }
     function openMenu(){
         menuOpened = true;
