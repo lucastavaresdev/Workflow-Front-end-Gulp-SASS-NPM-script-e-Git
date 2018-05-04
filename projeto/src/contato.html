@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Site pessoal da silvia silveira</title>
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css" </head>
+
+    <body>
+        @@include('./inc/nav.html')
+
+        <div class="jumbotron header-animado">
+            <div class="container">
+                <p class="header-animado__title">Vamos bater um papo?</p>
+                <h1 class="header-animado__subtitle">Entre em contato eque responderei o mais rapido possivel</h1>
+            </div>
+
+        </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+                    <form  id='contactForm' action="">
+                            <div class="form-group">
+                                    <label for="textnome">nome</label>
+                                    <input type="text"class="form-control" id='textnome' placeholder="Nome" >
+                            </div>
+                            <div class="form-group">
+                                    <label for="textemail">email</label>
+                                    <input type="text"class="form-control" id='textmail' placeholder="email" >
+                            </div>
+                            <div class="form-group">
+                                <label for="textmensagem">mensagem</label>
+                                <textarea class="form-control"  id="textmensagem"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="tn btn-lg">Enviar</button>
+                                </div>
+                            
+                    </form>
+                </div>
+            </div>
+
+
+
+            <hr>
+        </div>
+        @@include('./inc/footer.html')
+
+        <script src="javascript/main.js"></script>
+        <script src="javascript/menu.js"></script>
+
+    </body>
+
+</html>
