@@ -1,5 +1,6 @@
 var gulp  = require('gulp')
-,sass = require('gulp-sass'),
+,sass = require('gulp-sass')
+, include = require('gulp-file-include');
 browserSync = require('browser-sync');
 
 gulp.task('sass', function(){
@@ -8,11 +9,16 @@ gulp.src('./src/sass/**/*.scss')
     .pipe(gulp.dest('./src/css/'));
 })
 
+gulp.task('html',function(){
+    gulp.src('./src/index.html')
+        .pipe(include())
+        .pipe(gulp.dest('./dist/'))
+})
 
 gulp.task('serve', function(){
     browserSync.init({
         server:{
-            baseDir: 'src'
+            baseDir: 'dist'
         }
     })
     gulp.watch('./src/**/*').on('change', browserSync.reload)
