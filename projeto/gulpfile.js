@@ -3,6 +3,7 @@ var gulp = require('gulp')
     , include = require('gulp-file-include')
     , clean = require('gulp-clean')
     , autoprefixer = require('gulp-autoprefixer')
+    , postcss = require('gulp-postcss')
     , browserSync = require('browser-sync')
 
 gulp.task('clean', function () {
@@ -37,7 +38,18 @@ gulp.task('html', function () {
         .pipe(gulp.dest('./dist/'))
 })
 
-gulp.task('serve', ['html'], function () {
+
+
+
+
+gulp.task('uncss',['html'], function () {
+    return gulp.src('/dist/components/**/*.css')
+        .pipe(postcss())
+        .pipe(gulp.dest('./dist/components/'));
+});
+
+
+gulp.task('serve', ['uncss'], function () {
     browserSync.init({
         server: {
             baseDir: 'dist'
