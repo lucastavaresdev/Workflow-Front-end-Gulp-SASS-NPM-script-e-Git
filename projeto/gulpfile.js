@@ -11,8 +11,6 @@ var gulp = require('gulp')
         return gulp.src('dist')
             .pipe(clean());
     })
-    
-
 
 gulp.task('copy', ['clean'], function () {
     gulp.src([
@@ -32,10 +30,7 @@ gulp.task('sass', function(){
 })
 
 gulp.task('html', function(){
-    return gulp.src([
-            './src/**/*.html',
-            '!src/inc/**'
-        ])
+    return gulp.src('./src/**/*.html')
         .pipe(include())
         .pipe(gulp.dest('./dist/'))
 })
@@ -52,7 +47,7 @@ gulp.task('uncss', ['html'] , function () {
 gulp.task('imagemin', function(){
     return gulp.src('./src/img/**/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('./dist/imagens/'))
+        .pipe(gulp.dest('./dist/img/'))
 });
 
 
