@@ -35,13 +35,15 @@
         img {
             max-width: 100%;
             opacity: .5;
-            transition: opacity .3s linear,transform 1s ease-in;
+            transition: opacity .3s linear, transform 1s ease-in, filter .5 linear;
+            filter: grayscale(1);
         }
     }
     &:hover {
         img {
             opacity: 1;
             transform: scale(1.15) rotate(-5deg);
+            filter: grayscale(0);
         }
         .card-portfolio__btn {
             background: lighten($main-color, 30);
