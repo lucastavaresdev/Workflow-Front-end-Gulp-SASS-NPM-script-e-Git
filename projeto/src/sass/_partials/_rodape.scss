@@ -1,4 +1,13 @@
 .rodape {
+    .color-icon{
+        fill: red;
+        &:hover{
+            fill: blue;
+        }
+    }
+
+
+
     background: lighten($main-color, 30);
     color: white;
     padding: 1em 0;
