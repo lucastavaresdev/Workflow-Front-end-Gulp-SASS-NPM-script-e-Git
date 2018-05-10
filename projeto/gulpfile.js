@@ -8,6 +8,7 @@ var gulp = require('gulp')
     , cssnano= require('gulp-cssnano')
     , uglify = require('gulp-uglify')
     , concat = require('gulp-concat')
+    , rename = require('gulp-rename')
     , browserSync = require('browser-sync')
 
     gulp.task('clean', function(){
@@ -31,6 +32,15 @@ gulp.task('sass', function(){
         .pipe(autoprefixer())
         .pipe(cssnano())
         .pipe(gulp.dest('./dist/css/'));
+})
+
+gulp.task('svgmin', function(){
+    return gulp.src(['src/inc/icon/*.svg,   !./src/inc/icon/*min.svg'])
+        .pipe(imagemin())
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest('src/inc/icon/*.svg'))
 })
 
 
@@ -86,7 +96,10 @@ gulp.task('serve',['html'], function () {
     gulp.watch('./src/sass/**/*.scss', ['sass'])
     gulp.watch('./src/**/*.html', ['html'])
     gulp.watch('.src/javascript/**/*', ['build-js'])
-  
+  gulp.watch([
+      './src/inc/icon/*.svg',
+      '!./src/inc/icon/*min.svg'
+    ], ['svgmin'])
 })
 
 
