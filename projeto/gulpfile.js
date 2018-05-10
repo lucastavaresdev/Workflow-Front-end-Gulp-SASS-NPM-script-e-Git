@@ -82,9 +82,10 @@ gulp.task('serve',['html'], function () {
 
     gulp.watch('./dist/**/*').on('change', browserSync.reload)
 
+    //monitora alteração caso sera alteradao reload o browser
     gulp.watch('./src/sass/**/*.scss', ['sass'])
     gulp.watch('./src/**/*.html', ['html'])
-
+    gulp.watch('.src/javascript/**/*', ['build-js'])
   
 })
 
