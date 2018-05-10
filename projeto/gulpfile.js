@@ -3,7 +3,7 @@ var gulp = require('gulp')
     , include = require('gulp-file-include')
     , clean = require('gulp-clean')
     , autoprefixer = require('gulp-autoprefixer')
-    , postcss = require('gulp-postcss')
+    , uncss = require('postcss-uncss')
     , imagemin = require('gulp-imagemin')
     , cssnano= require('gulp-cssnano')
     , uglify = require('gulp-uglify')
@@ -43,19 +43,22 @@ gulp.task('build-js', function(){
 
 
 gulp.task('html', function(){
-    return gulp.src('./src/**/*.html')
+    return gulp.src([
+            './src/**/*.html',
+            '!src/inc/**'
+        ])
         .pipe(include())
         .pipe(gulp.dest('./dist/'))
 })
 
 
-
-gulp.task('uncss', ['html'] , function () {
+gulp.task('uncss', ['html'], function(){
     return gulp.src('./dist/components/**/*.css')
-        .pipe(postcss())
-        .pipe(gulp.dest('./dist/components/'));
-});
-
+        .pipe(uncss({
+            html: ['./dist/*.html']
+        }))
+        .pipe(gulp.dest('./dist/components/'))
+})
 
 gulp.task('imagemin', function(){
     return gulp.src('./src/img/**/*')
@@ -64,8 +67,13 @@ gulp.task('imagemin', function(){
 });
 
 
+gulp.task('default', ['copy' ,], function(){
+    gulp.start('uncss', 'imagemin', 'sass' , 'build-js')
+})
 
-gulp.task('serve', ['uncss', 'imagemin', 'sass', 'copy'], function () {
+
+
+gulp.task('serve',['html'], function () {
     browserSync.init({
         server: {
             baseDir: 'dist'
@@ -76,6 +84,8 @@ gulp.task('serve', ['uncss', 'imagemin', 'sass', 'copy'], function () {
 
     gulp.watch('./src/sass/**/*.scss', ['sass'])
     gulp.watch('./src/**/*.html', ['html'])
+
+  
 })
 
 
