@@ -5,6 +5,9 @@ var gulp = require('gulp')
     , autoprefixer = require('gulp-autoprefixer')
     , postcss = require('gulp-postcss')
     , imagemin = require('gulp-imagemin')
+    , cssnano= require('gulp-cssnano')
+    , uglify = require('gulp-uglify')
+    , concat = require('gulp-concat')
     , browserSync = require('browser-sync')
 
     gulp.task('clean', function(){
@@ -26,8 +29,18 @@ gulp.task('sass', function(){
     return gulp.src('./src/sass/**/*.scss')
         .pipe(sass())
         .pipe(autoprefixer())
+        .pipe(cssnano())
         .pipe(gulp.dest('./dist/css/'));
 })
+
+
+gulp.task('build-js', function(){
+    gulp.src('src/javascript/**/*')
+    .pipe(concat('app.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/javascript/'))
+})
+
 
 gulp.task('html', function(){
     return gulp.src('./src/**/*.html')
@@ -64,3 +77,5 @@ gulp.task('serve', ['uncss', 'imagemin', 'sass', 'copy'], function () {
     gulp.watch('./src/sass/**/*.scss', ['sass'])
     gulp.watch('./src/**/*.html', ['html'])
 })
+
+
