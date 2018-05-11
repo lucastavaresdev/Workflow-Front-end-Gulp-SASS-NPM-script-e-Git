@@ -33,3 +33,23 @@ git push origin master
 ver comits
 
 git log -n 4
+
+// para ver os commits
+
+git log --oneline
+
+----------- descartar coomit - refaz 
+
+git checkout (nome do arquivo) 
+
+-- vizualizar as branch
+
+git branch
+
+---- crias uma branch
+
+git branch nome da branch
+
+--mudar de branch
+
+$ git checkout 'teste'
