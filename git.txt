@@ -82,3 +82,13 @@ para adicionar um repositorio em online no rep local
 git remote add origon (https:git dkaslkda) vinculou
 
 git push -u origin master // vincula a master local com a do github
+
+
+-- para remover arquivo no git
+git checkout -b nomedoarquivo
+
+git rm nomedoarquivo
+
+git commit -am "removidos arquivos não utilizado"
+
+git push origin master
