@@ -77,3 +77,8 @@ eu posso excluir a branch se desejado
 git branch -d (nome da branch)
 
 --- 
+
+para adicionar um repositorio em online no rep local 
+git remote add origon (https:git dkaslkda) vinculou
+
+git push -u origin master // vincula a master local com a do github
