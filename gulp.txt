@@ -26,7 +26,7 @@ npm uninstall node-sass --save-dev
 --instalando o gulp-sass
 $ npm install gulp-sass --save-dev
 
-
+//comentario de teste nova branch
 -------------------------------
 live rederização
 
