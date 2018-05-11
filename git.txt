@@ -56,5 +56,13 @@ $ git checkout 'nomedabranch'
 
 --------------------
 
+Para deletar uma branch
+
+git branch -D nome da branch
+
+criar a branch e ja ir nela
+
+git checkout -b nova
+
 
 
