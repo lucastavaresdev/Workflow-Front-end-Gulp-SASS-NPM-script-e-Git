@@ -71,3 +71,9 @@ git merge passa o conteudo do principal para outra
 
 git branch master (entrar na branch que quer passar)
 git merge (nome da branch)
+
+eu posso excluir a branch se desejado
+
+git branch -d (nome da branch)
+
+--- 
