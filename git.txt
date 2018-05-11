@@ -52,4 +52,9 @@ git branch nome da branch
 
 --mudar de branch
 
-$ git checkout 'teste'
+$ git checkout 'nomedabranch'
+
+--------------------
+
+
+
